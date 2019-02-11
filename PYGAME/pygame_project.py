@@ -3,7 +3,7 @@ import os
 import sys
 
 
-
+# я очень люблю кодить!!!!!!!!!!
 
 pygame.init()
 
