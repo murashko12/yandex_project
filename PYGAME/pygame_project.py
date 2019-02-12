@@ -8,12 +8,13 @@ import sys
 pygame.init()
 
 
-WIDTH = 400
-HEIGHT = 300
+WIDTH = 1100
+HEIGHT = 700
 FPS = 50
 size = WIDTH, HEIGHT
 screen = pygame.display.set_mode(size)
 
+# окно: "Добро пожаловать" ------------------------------------------------------
 
 clock = pygame.time.Clock()
 def load_image(name, color_key=None):
@@ -44,7 +45,7 @@ def start_screen():
                   "приходится выводить их построчно"]
 
  
-    fon = pygame.transform.scale(load_image('fon.jpg'), (WIDTH, HEIGHT))
+    fon = pygame.transform.scale(load_image('welcome.jpg'), (WIDTH, HEIGHT))
     screen.blit(fon, (0, 0))
     font = pygame.font.Font(None, 30)
     text_coord = 50
@@ -70,7 +71,6 @@ def start_screen():
 start_screen()
 
 
-# окно: "Добро пожаловать" ------------------------------------------------------
 
 
 
@@ -88,6 +88,6 @@ start_screen()
 
 
 # III уровень              ------------------------------------------------------
-'''
+
 
 
