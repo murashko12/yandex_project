@@ -75,25 +75,7 @@ start_screen()
 
 
 # создаём аниамации        ------------------------------------------------------
-'''
-class AnimatedSprite_of_main_the_main_character(pygame.sprite.Sprite):
-    def __init__(self,):
-        super().__init__(all_sprites)
-        self.frames = []
 
-    
-
-
-class AnimatedSprite_of_dragon(pygame.sprite.Sprite): # Дракон (BOSS)
-    def __init__(self,):
-
-
-class AnimatedSprite_of_goblin(pygame.sprite.Sprite): # Гоблин 
-    def __init__(self,):
-
-
-class AnimatedSprite_of_gargoyle(pygame.sprite.Sprite): # Гаргулья 
-    def __init__(self,):
 
 
 
