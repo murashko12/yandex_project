@@ -11,6 +11,7 @@ HEIGHT = 700
 FPS = 50
 size = WIDTH, HEIGHT
 screen = pygame.display.set_mode(size)
+scr = pygame.display.set_mode(size)
 
 # окно: "Добро пожаловать" ------------------------------------------------------
 
@@ -37,7 +38,7 @@ def terminate():
  
  
 def start_screen():
-    intro_text = ["                                                                           B A R B A R I A N"]
+    intro_text = [""]
 
  
     fon = pygame.transform.scale(load_image('welcome.jpg'), (WIDTH, HEIGHT))
@@ -78,7 +79,29 @@ start_screen()
 
 
 # I уровень                ------------------------------------------------------
+def load_level_1(filename):
+    filename = "maps_of_levels" + filename
+    # читаем уровень, убирая символы перевода строки
+    with open(filename, 'r') as mapFile:
+        level_map = [line.strip() for line in mapFile]
+ "adgadgjs"
+    # и подсчитываем максимальную длину    
+    max_width = max(map(len, level_map))
+ 
+    # дополняем каждую строку пустыми клетками ('.')    
+    return list(map(lambda x: x.ljust(max_width, '.'), level_map))
 
+tile_images = {'#': load_image('.png'), # тропинка (есть)
+               '.': load_image('.png'), # основная дорога (есть)
+               '*': load_image('.png'), # трава (есть)
+               '!': load_image('.png'), # стена (есть)
+               '=': load_image('.png'), # сундук 
+               'X': load_image('.png'), # бомба
+               '&': load_image('.png'), # дверь 
+               'w': load_image('.png'), # вода (есть)
+               't': load_image('.png')} # мост
+ 
+tile_width = tile_height = 50
 
 
 # II уровень               ------------------------------------------------------
