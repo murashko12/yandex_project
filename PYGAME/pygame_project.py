@@ -3,8 +3,6 @@ import os
 import sys
 
 
-# я очень люблю кодить!!!!!!!!!!
-
 pygame.init()
 
 
@@ -39,10 +37,7 @@ def terminate():
  
  
 def start_screen():
-    intro_text = ["ЗАСТАВКА", "",
-                  "Правила игры",
-                  "Если в правилах несколько строк,",
-                  "приходится выводить их построчно"]
+    intro_text = ["                                                                           B A R B A R I A N"]
 
  
     fon = pygame.transform.scale(load_image('welcome.jpg'), (WIDTH, HEIGHT))
@@ -50,7 +45,7 @@ def start_screen():
     font = pygame.font.Font(None, 30)
     text_coord = 50
     for line in intro_text:
-        string_rendered = font.render(line, 1, pygame.Color('black'))
+        string_rendered = font.render(line, 9, pygame.Color('red'))
         intro_rect = string_rendered.get_rect()
         text_coord += 10
         intro_rect.top = text_coord
@@ -74,7 +69,10 @@ start_screen()
 
 
 
-# создаём аниамации        ------------------------------------------------------
+
+
+
+# создаём анимации        ------------------------------------------------------
 
 
 
@@ -88,6 +86,3 @@ start_screen()
 
 
 # III уровень              ------------------------------------------------------
-
-
-
